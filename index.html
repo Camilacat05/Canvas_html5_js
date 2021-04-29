@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Paint Canvas</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="container" class="canvas">
+        <canvas id="imageView" width="500" height="400">
+          <p>O Navegador utilizado nao suporta html5 canvas</p>
+          <p>Por favor utilize outro browser (chrome, firefox, opera).</p>
+        </canvas>
+      </div>
+
+      <div class="controllers">
+        <div class="elements">
+          <div class="buttons">
+            <button onclick="download()" class="btn download">
+              Exportar coordenadas
+            </button>
+            <input
+              type="button"
+              value="Limpar Canvas"
+              id="clr"
+              class="btn clear"
+              size="30"
+              onclick="erase()"
+            />
+          </div>
+
+          <div class="group">
+            <label
+              >Selecione a Ferramenta de Desenho Desejada:
+              <select id="dtool" class="bd-botton">
+                <option value="point">Ponto</option>
+                <option value="line">Linha</option>
+                <option value="polygon">Polígono</option>
+                <option value="bezier">Curva Bezier</option>
+                <option value="circle">Círculo</option>
+                <option value="rect">Retângulo</option>
+                <option value="pencil">Pincel</option>
+              </select></label
+            >
+          </div>
+
+          <div class="group">
+            <label for="edge"
+              >Número de arestas, caso a opção selecionada seja Polígono:</label
+            >
+            <input type="number" id="edge" class="bd-botton arestas" />
+          </div>
+
+          <div class="informations">
+            <p id="coordenadas_poligono"></p>
+            <p id="x_poligono"></p>
+            <p id="y_poligono"></p>
+            <a href="/images/myw3schoolsimage.jpg" download="w3logo"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="aplicacao.js"></script>
+  </body>
+</html>
